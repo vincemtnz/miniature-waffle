@@ -1,0 +1,15 @@
+{
+  "name": "@yolo/shared-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@cucumber/cucumber": "^8.9.0"
+  }
+}

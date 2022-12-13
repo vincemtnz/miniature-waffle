@@ -1,0 +1,5 @@
+{
+  "extends": "@tsconfig/node16",
+  "include": ["./packages/**/*.ts", "./services/**/*.ts"],
+  "exclude": ["node_modules"]
+}
