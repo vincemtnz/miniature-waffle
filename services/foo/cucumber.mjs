@@ -16,5 +16,6 @@ export const ci = {
 	...common,
 	parallel: 2,
 	format: ["junit:cucumber-report.xml"],
+	publish: true,
 	publishQuiet: true,
 };
