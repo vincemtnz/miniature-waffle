@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc --noEmit",
+    "prepare": "husky install",
+    "format": "rome format --write .",
     "lint": "rome check .",
-    "format": "rome format --write ."
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,17 @@
     "@swc-node/register": "^1.5.4",
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.11.14",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "rome": "^11.0.0",
     "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs,mts}": [
+      "rome format --write"
+    ],
+    "*.{ts,tsx,mts}": [
+      "rome check "
+    ]
   }
 }
