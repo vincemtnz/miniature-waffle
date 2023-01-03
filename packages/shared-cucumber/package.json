@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "test:ci": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
     "@cucumber/cucumber": "^8.9.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }

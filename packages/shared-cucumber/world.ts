@@ -1,19 +1,20 @@
 import { IWorldOptions, World as BaseWorld } from "@cucumber/cucumber";
-import { AllocationPlugin } from "./allocation";
+import { AllocationContext } from "./allocation";
+import { AuthContext } from "./auth";
 
 interface WorldParams {
 	region?: string;
 }
 
-interface WorldPlugins {
-	allocation?: AllocationPlugin;
+interface Contexts {
+	allocation?: AllocationContext;
+	auth?: AuthContext;
 }
 
 export class World extends BaseWorld<WorldParams> {
-	plugins: WorldPlugins;
+	ctx: Contexts;
 	constructor(options: IWorldOptions<WorldParams>) {
 		super(options);
-		console.debug("Initialising empty list of plugins.");
-		this.plugins = {};
+		this.ctx = {};
 	}
 }

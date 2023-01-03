@@ -25,16 +25,21 @@ importers:
   packages/shared-cucumber:
     specifiers:
       '@cucumber/cucumber': ^8.9.0
+      '@faker-js/faker': ^7.6.0
     dependencies:
       '@cucumber/cucumber': 8.9.0
+    devDependencies:
+      '@faker-js/faker': 7.6.0
 
   services/foo:
     specifiers:
       '@cucumber/cucumber': ^8.9.0
+      '@faker-js/faker': ^7.6.0
       '@yolo/shared-cucumber': workspace:^1.0.0
     dependencies:
       '@cucumber/cucumber': 8.9.0
     devDependencies:
+      '@faker-js/faker': 7.6.0
       '@yolo/shared-cucumber': link:../../packages/shared-cucumber
 
 packages:
@@ -165,6 +170,11 @@ packages:
 
   /@cucumber/tag-expressions/4.1.0:
     resolution: {integrity: sha512-chTnjxV3vryL75N90wJIMdMafXmZoO2JgNJLYpsfcALL2/IQrRiny3vM9DgD5RDCSt1LNloMtb7rGey9YWxCsA==}
+
+  /@faker-js/faker/7.6.0:
+    resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: true
 
   /@rometools/cli-darwin-arm64/11.0.0:
     resolution: {integrity: sha512-F3vkdY+s3FLIEnAjSbyHTuIPB88cLpccimW4ecid5I7S6GzGG3iUJI4xT00JhH73K4P/qW20/9r+kH1T9Du8Xg==}
