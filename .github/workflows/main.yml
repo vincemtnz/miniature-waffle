@@ -1,0 +1,26 @@
+name: Main tests
+on:
+  push:
+jobs:
+  test:
+    name: Test on Node v${{ matrix.node-version }} (${{ matrix.architecture }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+        architecture: ["x64", "arm64"]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          architecture: ${{ matrix.architecture }}
+          cache: "pnpm"
+      - run: pnpm install --prefer-offline --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm --recursive test:ci
