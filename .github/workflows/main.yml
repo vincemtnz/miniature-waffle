@@ -24,3 +24,9 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm lint
       - run: pnpm --recursive test:ci
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: services/**/cucumber-report.xml
