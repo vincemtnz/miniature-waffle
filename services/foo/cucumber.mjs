@@ -1,6 +1,6 @@
 const common = {
   requireModule: ["@swc-node/register"],
-  require: ["support/**/*.ts", "node_modules/@yolo/shared-cucumber/**/*.ts"],
+  require: ["node_modules/@yolo/shared-cucumber/**/*.ts", "support/**/*.ts"],
 };
 
 export default {

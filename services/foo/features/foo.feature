@@ -1,6 +1,7 @@
 Feature: Is foo bar?
 
   Scenario: Shared foo bar ting
-    When I set foo to bar
-    Then I expect foo to be bar
-    Then I expect foo to be bar in my local scope too
+    Then allocation bar should be set
+    And allocation foo should be true
+    And allocation method should do something
+    And I should be able to see allocation from here too
