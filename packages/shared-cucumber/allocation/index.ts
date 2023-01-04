@@ -1,7 +1,7 @@
 import assert from "node:assert";
-import { BaseContext, WorldContexts } from "../contexts";
 import { Before, Then } from "@cucumber/cucumber";
-import { World } from "../world";
+import { BaseContext } from "../context";
+import { Contexts, World } from "../world";
 
 interface IAllocationContextOptions {
 	allicationfoo?: boolean;
@@ -9,7 +9,7 @@ interface IAllocationContextOptions {
 }
 
 interface IAllocationWorld extends World {
-	ctx: WorldContexts & { allocation: AllocationContext };
+	ctx: Contexts & { allocation: AllocationContext };
 }
 
 export class AllocationContext extends BaseContext {

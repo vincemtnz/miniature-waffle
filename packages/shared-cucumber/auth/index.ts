@@ -1,7 +1,7 @@
 import { Before, Given, Then } from "@cucumber/cucumber";
 import assert from "node:assert";
 import { randomUUID } from "node:crypto";
-import { BaseContext } from "../contexts";
+import { BaseContext } from "../context";
 import { World } from "../world";
 import { faker } from "@faker-js/faker";
 
@@ -74,6 +74,9 @@ Given<World>("there is a member called {string}", function (name: string) {
 	});
 
 	assert(member);
+	assert(this.ctx.auth);
+	this.ctx.auth.save(member.id, member);
+	const m = this.ctx.auth.read(member.id) as User;
 });
 
 Then<World>("member {string} should have an email", function (name: string) {

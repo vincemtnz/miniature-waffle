@@ -6,7 +6,7 @@ interface WorldParams {
 	region?: string;
 }
 
-interface Contexts {
+export interface Contexts {
 	allocation?: AllocationContext;
 	auth?: AuthContext;
 }

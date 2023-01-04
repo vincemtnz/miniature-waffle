@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^8.9.0",
+    "@cucumber/cucumber": "^8.10.0",
     "@swc-node/register": "^1.5.4",
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.11.14",
