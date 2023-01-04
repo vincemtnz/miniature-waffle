@@ -22,3 +22,5 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm lint
       - run: pnpm -r test:ci
+        env:
+          CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
